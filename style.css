@@ -20,12 +20,14 @@
 html,body{
     height: 100%;
     width: 100%;
+    background-color: #fbf9f3;
+    font-family: NB;
 }
 
 #page1{
     height: 100vh;
     width: 100%;
-    background-color: #dadada;
+    /* background-color: #dadada; */
     position: relative;
 }
 
@@ -40,6 +42,7 @@ html,body{
     height: 7vw;
     width: 7vw;
     background-color: #0000009f;
+    /* background-color: #; */
     border-radius: 50%;
     position: fixed;
     z-index: 9;
@@ -47,7 +50,7 @@ html,body{
     align-items: center;
     justify-content: center;
     scroll-behavior: smooth;
-    transition: all ease .2s;
+    transition: all ease .1s;
 }
 
 #cursor h5{
@@ -104,7 +107,142 @@ nav h4{
 
 
 #page2{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    background-color: beige;
+    padding: 3vw;
+    /* background-color: #fbf9f3; */
+    position: relative;
+}
+
+
+#top{
+    height: 15vh;
+    font-family: NB;
+    align-content: end;
+}
+
+#top #heading{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#heading h3,h4{
+    font-size: 1.7vw;
+    font-weight: 400;
+}
+
+#top .line{
+    height: 1px;
+    align-items: center;
+    background-color: #000;
+    margin-top: 15px;
+}
+
+
+#middle{
+    height: calc(100vh - 14vh);
+    
+}
+
+#middle h2{
+    margin-top: 10px;
+    text-indent: 2em;
+    font-family: NB;
+    font-weight: 300;
+    font-size: 4.2vw;
+    line-height: 70px;
+}
+
+#bottom{
+    height: 40vh;
+    width: 95%;
+    /* background-color: red; */
+    margin-left: 50px;
+    font-family: NB;
+}
+
+#bottom #elem1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#elem1 h5{
+    font-size: 1.2vw;
+    font-weight: 100;
+}
+
+#elem1 h5 span{
+    background-color: #000;
+    color: #fff;
+    border-radius: 50px;
+    height: 23px;
+    padding: 3px 8px;
+    font-size: .7vw;
+}
+
+#elem1 img{
+    height: 15px;
+    margin-left: 10px;
+}
+
+#bottom #elem2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    line-height: 70px;
+}
+
+#elem2 h2{
+    text-indent: 1em;
+    font-size: 4.1vw;
+    font-weight: 300;
+    text-decoration: underline;
+
+}
+
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    padding: 3vw;
+    position: relative;
+}
+
+#txt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+#txt h2{
+    font-size: 1.6vw;
+    font-weight: 300;
+
+}
+
+#elements{
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+#elements .box{
+    height: 100%;
+    width: 32.7%;
+    /* background-color: blue; */
+}
+
+.box video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
