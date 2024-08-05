@@ -133,9 +133,9 @@ nav h4{
 }
 
 #top .line{
-    height: 1px;
+    height: .2px;
     align-items: center;
-    background-color: #000;
+    background-color: #00000079;
     margin-top: 15px;
 }
 
@@ -237,6 +237,7 @@ nav h4{
 #elements .box{
     height: 100%;
     width: 32.7%;
+    position: relative;
     /* background-color: blue; */
 }
 
@@ -247,8 +248,50 @@ nav h4{
     object-position: center;
 }
 
+.box img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all linear .8s;
+}
+
+.box:hover img{
+    opacity: 0;
+}
+
 #page4{
     min-height: 100vh;
     width: 100%;
-    background-color: red;
+    /* background-color: red; */
+    padding: 3vw;
+    position: relative;
+}
+
+#bottom-vid{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bottom-vid video{
+    height: 100%;
+}
+
+#bottom-vid svg{
+    position: absolute;
+    height: 55%;
+}
+
+#page4 #end{
+    margin-bottom: -100px;
+}
+
+#page5{
+    height: 100vh;
+    width: 100%;
+    background-color: antiquewhite;
 }
