@@ -103,3 +103,34 @@ function Swiperjs(){
 
 }
 Swiperjs()
+
+
+var tl = gsap.timeline()
+
+tl.from("#loader h2", {
+    x: 50,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.1
+})
+
+tl.to("#loader h2", {
+    x: -50,
+    opacity: 0,
+    duration: .5,
+    stagger: 0.1
+})
+
+tl.to("#loader", {
+    opacity: 0
+})
+
+tl.from("#page1-content h1 span", {
+    y: 100,
+    opacity: 0,
+    stagger: 0.1,
+})
+
+tl.to("#loader", {
+    display: "none"
+})
