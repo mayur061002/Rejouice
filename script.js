@@ -25,6 +25,7 @@ function locoscroll(){
 }
 locoscroll();
 
+
 function cursorEffect(){
     var page1content = document.querySelector("#page1-content");
     var cursor = document.querySelector("#cursor");
@@ -57,20 +58,37 @@ function cursorEffect(){
 }
 cursorEffect();
 
-function page2animation(){
+
+function page2animation() {
+
     gsap.from("#middle h2", {
         y: 120,
         stagger: 0.2,
-        duration: 1,
-        srcollTrigger: {
+        duration: 2,
+        scrollTrigger: {
             trigger: "#page2",
             scroller: "#main",
-            start: "top 40%",
-            end: "top 37%",
-            markers: true,
+            start: "top 47%",
+            end: "top 46%",
+            markers: false,
             scrub: 2
         }
-    })
+    });
+
+    gsap.from("#middle h2", {
+        x: 120,
+        stagger: 0.2,
+        duration: 2,
+        scrollTrigger: {
+            trigger: "#page4",
+            scroller: "#main",
+            start: "top 47%",
+            end: "top 45%",
+            markers: false,
+            scrub: 2
+        }
+    });
+
 }
 page2animation();
 
@@ -102,35 +120,57 @@ function Swiperjs(){
     
 
 }
-Swiperjs()
+Swiperjs();
 
 
-var tl = gsap.timeline()
+function loadinganimation(){
+    
+    var tl = gsap.timeline()
+    
+    tl.from("#loader h2", {
+        x: 50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.1
+    })
+    
+    tl.to("#loader h2", {
+        x: -50,
+        opacity: 0,
+        duration: .5,
+        stagger: 0.1
+    })
+    
+    tl.to("#loader", {
+        opacity: 0
+    })
+    
+    tl.from("#page1-content h1 span", {
+        y: 100,
+        opacity: 0,
+        stagger: 0.1,
+    })
+    
+    tl.to("#loader", {
+        display: "none"
+    })
 
-tl.from("#loader h2", {
-    x: 50,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.1
-})
+    tl.from("#part-3 h1 span", {
+        y: -100,
+        opacity: 0,
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: "#page7",
+            scroller: "#main",
+            start: "top 80%",
+            end: "top -10%",
+            markers: false,
+            scrub: 2
+        }
+    })
 
-tl.to("#loader h2", {
-    x: -50,
-    opacity: 0,
-    duration: .5,
-    stagger: 0.1
-})
+}
+loadinganimation();
 
-tl.to("#loader", {
-    opacity: 0
-})
 
-tl.from("#page1-content h1 span", {
-    y: 100,
-    opacity: 0,
-    stagger: 0.1,
-})
 
-tl.to("#loader", {
-    display: "none"
-})
