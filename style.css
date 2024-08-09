@@ -279,17 +279,34 @@ nav h4{
 }
 
 #bottom-vid video{
-    height: 100%;
+    height: 130%;
 }
 
 #bottom-vid svg{
     position: absolute;
-    height: 55%;
+    height: 75%;
 }
 
 #page4 #end{
     height: 70vh;
     /* background-color: red; */
+}
+
+#page4 h1{
+    color: #fff;
+    font-size: 4vw;
+    font-weight: 100;
+    top: 44%;
+    position: absolute;
+}
+
+#page4 p{
+    color: #fff;
+    font-size: 1.7vw;
+    font-weight: 100;
+    top: 53%;
+
+    position: absolute;
 }
 
 #page5{
